@@ -4,7 +4,7 @@
     {% if items %}
         <ul>
         {% for item in items %}
-            <li><a href="/inventory/{{ item.id }}/">{{ item.name }}</a></li>
+            <li><a href={% url 'show-item' id=item.id %}>{{ item.name }}</a></li>
         {% endfor %}
         </ul>
     {% else %}

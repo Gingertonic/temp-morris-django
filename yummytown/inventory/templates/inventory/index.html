@@ -1,0 +1,13 @@
+{% extends "inventory/base.html" %}
+
+{% block content %}
+    {% if items %}
+        <ul>
+        {% for item in items %}
+            <li><a href="/inventory/{{ item.id }}/">{{ item.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No items are available.</p>
+    {% endif %}
+{% endblock content %}

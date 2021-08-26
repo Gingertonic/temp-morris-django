@@ -1,5 +1,13 @@
 {% extends 'inventory/base.html' %}
 
 {% block content %}
- <p>We have {{item.quantity}} portions of {{item.name}} available</p>
+<p>We have {{item.quantity}} portions of {{item.name}} available</p>
+
+{% if form %}
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Increase quantity (+1)" />
+</form>
+{% endif %}
 {% endblock content %}

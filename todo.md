@@ -1,6 +1,6 @@
 Thursday
 
-9-9.30
+9-9.30 \
 **Database/Models**
     - [x] Setup database
     - [x] Access admin console
@@ -64,18 +64,18 @@ Thursday
 **Custom Forms**
     "All logged-in users can add a food item"
     "Category managers can increase (+1) the quantity of an item"
-    - [ ] Create basic NewFoodForm
-    - [ ] Add view method for `create`
+    - [x] Create basic NewFoodForm
+    - [x] Add view method for `create`
       + on `GET` request => generate a NewFoodForm, render `new.html`
       + on `POST` request => validates form, adds item to DB, redirects to show page
-    - [ ] Complete `new.html`: render form
-    - [ ] Update `index.html`: show link to create new item if user logged in
-    - [ ] Create basic UpdateQuantityForm
-    - [ ] Add manager:CharField to Category model 
-    - [ ] Update view method for `show` 
+    - [x] Complete `new.html`: render form
+    - [x] Update `index.html`: show link to create new item if user logged in
+    - [x] Create basic UpdateQuantityForm
+    - [x] Add manager:CharField to Category model 
+    - [x] Update view method for `show` 
       + on `GET` request => generate a UpdateQuantityForm, pass form in context
       + on `POST` request => validates form, updates item in DB, redirects to show page
-    - [ ] Update `show.html`: show button to +1 if user is category manager
+    - [x] Update `show.html`: show button to +1 if user is category manager
 
 **Bonus**
     Many to Many relationship

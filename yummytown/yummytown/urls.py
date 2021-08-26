@@ -18,5 +18,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('warehouse/', include('inventory.urls'))
+    path('warehouse/', include('inventory.urls')),
+    path('', include('users.urls'))
 ]
+
+handler404 = 'inventory.views.not_found_404'

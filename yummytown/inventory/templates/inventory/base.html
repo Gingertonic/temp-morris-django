@@ -13,6 +13,12 @@
     <nav>
         <a href="{% url 'inventory-index' %}">Inventory</a>
         <a href="{% url 'inventory-how-to' %}">How to Use</a>
+        {% if user.is_authenticated %}
+            <span>Hi {{user.username}}!</span>
+            <a href={% url 'logout' %}><button>Logout</button></a>
+        {% else %}
+            <a href={% url 'login' %}><button>Login</button></a>
+        {% endif %}
     </nav>
 
     <main>

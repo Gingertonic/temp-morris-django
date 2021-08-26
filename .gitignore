@@ -1,3 +1,4 @@
 .vscode
 Pipfile.lock
-todo.md
+__pycache__
+migrations

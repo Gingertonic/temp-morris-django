@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-z08!20bp(etjbx=ek0ss$lgnc3is=3v3gdp0p^x%_=!(my)7&u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'users.apps.UsersConfig',
     'inventory.apps.InventoryConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -51,6 +52,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'yummytown.urls'
+
+LOGIN_REDIRECT_URL = 'inventory-index'
+LOGIN_URL = 'login'
 
 TEMPLATES = [
     {
